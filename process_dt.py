@@ -190,7 +190,7 @@ def main():
     parser.add_argument("--output", default="out/dt_processed.avif", help="Output image path")
     parser.add_argument("--matrix-size", type=int, default=2, help="Bayer matrix size (2 or 4). Smaller => finer dots")
     parser.add_argument("--dither-scope", choices=["whole", "face"], default="whole", help="Apply dithering to whole image or to face areas only")
-    parser.add_argument("--expand", type=float, default=1.2, help="Expand factor for face masks (used when dither-scope=face)")
+    parser.add_argument("--expand", type=float, default=4.0, help="Expand factor for face masks (used when dither-scope=face)")
     parser.add_argument("--fill-bilateral", action="store_true", help="Fill between dither dots by blending with bilateral-filtered original")
     parser.add_argument("--bilateral-d", type=int, default=9, help="Diameter for bilateral filter")
     parser.add_argument("--bilateral-sigma-color", type=float, default=75.0, help="SigmaColor for bilateral filter")
